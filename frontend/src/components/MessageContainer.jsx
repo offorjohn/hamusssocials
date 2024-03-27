@@ -7,7 +7,9 @@ import { conversationsAtom, selectedConversationAtom } from "../atoms/messagesAt
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import userAtom from "../atoms/userAtom";
 import { useSocket } from "../context/SocketContext.jsx";
-import messageSound from "../assets/sounds/message.mp3";
+import messageSound from "./../assets/sounds/message.mp3";
+
+
 const MessageContainer = () => {
 	const showToast = useShowToast();
 	const selectedConversation = useRecoilValue(selectedConversationAtom);
@@ -107,7 +109,7 @@ const MessageContainer = () => {
 	return (
 		<Flex
 			flex='70'
-			bg={useColorModeValue("gray.200", "gray.dark")}
+			bg={useColorModeValue("silver", "gray.dark")}
 			borderRadius={"md"}
 			p={2}
 			flexDirection={"column"}

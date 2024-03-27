@@ -58,10 +58,10 @@ export default function SignupCard() {
 	};
 
 	return (
-		<Flex align={"center"} justify={"center"}>
+		<Flex align={"center"} color={"gold"} justify={"center"}>
 			<Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
 				<Stack align={"center"}>
-					<Heading fontSize={"4xl"} textAlign={"center"}>
+					<Heading fontSize={"4xl"}  color={"gold"} textAlign={"center"}>
 						Sign up
 					</Heading>
 				</Stack>
@@ -72,6 +72,7 @@ export default function SignupCard() {
 								<FormControl isRequired>
 									<FormLabel>Full name</FormLabel>
 									<Input
+									color={"gold"}
 										type='text'
 										onChange={(e) => setInputs({ ...inputs, name: e.target.value })}
 										value={inputs.name}
@@ -119,10 +120,10 @@ export default function SignupCard() {
 							<Button
 								loadingText='Submitting'
 								size='lg'
-								bg={useColorModeValue("gray.600", "gray.700")}
+								bg={useColorModeValue("black", "green")}
 								color={"white"}
 								_hover={{
-									bg: useColorModeValue("gray.700", "gray.800"),
+									bg: useColorModeValue("gray.700", "gold"),
 								}}
 								onClick={handleSignup}
 							>

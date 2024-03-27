@@ -57,7 +57,7 @@ const UserPage = () => {
 			)}
 
 			{posts.map((post) => (
-				<Post key={post._id} post={post} postedBy={post.postedBy} />
+				<Post key={post._id} post={post} postedBy={post.postedBy} setPosts = {setPosts} />
 			))}
 		</>
 	);

@@ -29,6 +29,7 @@ export default function LoginCard() {
 	const [inputs, setInputs] = useState({
 		username: "",
 		password: "",
+
 	});
 	const showToast = useShowToast();
 	const handleLogin = async () => {
@@ -55,7 +56,7 @@ export default function LoginCard() {
 		}
 	};
 	return (
-		<Flex align={"center"} justify={"center"}>
+		<Flex align={"center"}  color={"gold"} justify={"center"}>
 			<Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
 				<Stack align={"center"}>
 					<Heading fontSize={"4xl"} textAlign={"center"}>
@@ -67,6 +68,7 @@ export default function LoginCard() {
 					bg={useColorModeValue("white", "gray.dark")}
 					boxShadow={"lg"}
 					p={8}
+					color={"gold"}
 					w={{
 						base: "full",
 						sm: "400px",
@@ -76,6 +78,7 @@ export default function LoginCard() {
 						<FormControl isRequired>
 							<FormLabel>Username</FormLabel>
 							<Input
+							  color={"gold"}
 								type='text'
 								value={inputs.username}
 								onChange={(e) => setInputs((inputs) => ({ ...inputs, username: e.target.value }))}
@@ -85,6 +88,7 @@ export default function LoginCard() {
 							<FormLabel>Password</FormLabel>
 							<InputGroup>
 								<Input
+								color={"gold"}
 									type={showPassword ? "text" : "password"}
 									value={inputs.password}
 									onChange={(e) => setInputs((inputs) => ({ ...inputs, password: e.target.value }))}
@@ -103,10 +107,10 @@ export default function LoginCard() {
 							<Button
 								loadingText='Logging in'
 								size='lg'
-								bg={useColorModeValue("gray.600", "gray.700")}
+								bg={useColorModeValue("gray.600", "green")}
 								color={"white"}
 								_hover={{
-									bg: useColorModeValue("gray.700", "gray.800"),
+									bg: useColorModeValue("gold", "gold"),
 								}}
 								onClick={handleLogin}
 								isLoading={loading}
@@ -117,7 +121,7 @@ export default function LoginCard() {
 						<Stack pt={6}>
 							<Text align={"center"}>
 								Don&apos;t have an account?{" "}
-								<Link color={"blue.400"} onClick={() => setAuthScreen("signup")}>
+								<Link color={"white"} onClick={() => setAuthScreen("signup")}>
 									Sign up
 								</Link>
 							</Text>

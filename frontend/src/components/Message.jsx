@@ -15,7 +15,7 @@ const Message = ({ ownMessage, message }) => {
 				<Flex gap={2} alignSelf={"flex-end"}>
 					{message.text && (
 						<Flex bg={"green.800"} maxW={"350px"} p={1} borderRadius={"md"}>
-							<Text color={"white"}>{message.text}</Text>
+							<Text color={"gold"}>{message.text}</Text>
 							<Box
 								alignSelf={"flex-end"}
 								ml={1}
@@ -31,6 +31,7 @@ const Message = ({ ownMessage, message }) => {
 							<Image
 								src={message.img}
 								hidden
+								color={"gold"}
 								onLoad={() => setImgLoaded(true)}
 								alt='Message image'
 								borderRadius={4}
@@ -60,7 +61,7 @@ const Message = ({ ownMessage, message }) => {
 					<Avatar src={selectedConversation.userProfilePic} w='7' h={7} />
 
 					{message.text && (
-						<Text maxW={"350px"} bg={"gray.400"} p={1} borderRadius={"md"} color={"black"}>
+						<Text maxW={"350px"} bg={"gold"} p={1} borderRadius={"md"} color={"black"}>
 							{message.text}
 						</Text>
 					)}

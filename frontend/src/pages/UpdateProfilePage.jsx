@@ -63,9 +63,10 @@ export default function UpdateProfilePage() {
 			<Flex align={"center"} justify={"center"} my={6}>
 				<Stack
 					spacing={4}
+					color={"gold"}
 					w={"full"}
 					maxW={"md"}
-					bg={useColorModeValue("white", "gray.dark")}
+					bg={useColorModeValue("gold", "gray.dark")}
 					rounded={"xl"}
 					boxShadow={"lg"}
 					p={6}
@@ -92,7 +93,7 @@ export default function UpdateProfilePage() {
 							placeholder='John Doe'
 							value={inputs.name}
 							onChange={(e) => setInputs({ ...inputs, name: e.target.value })}
-							_placeholder={{ color: "gray.500" }}
+							_placeholder={{ color: "gold" }}
 							type='text'
 						/>
 					</FormControl>
@@ -102,7 +103,7 @@ export default function UpdateProfilePage() {
 							placeholder='johndoe'
 							value={inputs.username}
 							onChange={(e) => setInputs({ ...inputs, username: e.target.value })}
-							_placeholder={{ color: "gray.500" }}
+							_placeholder={{ color: "gold" }}
 							type='text'
 						/>
 					</FormControl>
@@ -142,14 +143,14 @@ export default function UpdateProfilePage() {
 							color={"white"}
 							w='full'
 							_hover={{
-								bg: "red.500",
+								bg: "gold",
 							}}
 						>
 							Cancel
 						</Button>
 						<Button
 							bg={"green.400"}
-							color={"white"}
+							color={"gold"}
 							w='full'
 							_hover={{
 								bg: "green.500",

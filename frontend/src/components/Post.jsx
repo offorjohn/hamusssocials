@@ -11,7 +11,7 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import userAtom from "../atoms/userAtom";
 import postsAtom from "../atoms/postsAtom";
 
-const Post = ({ post, postedBy }) => {
+const Post = ({ post, postedBy  }) => {
 	const [user, setUser] = useState(null);
 	const showToast = useShowToast();
 	const currentUser = useRecoilValue(userAtom);
@@ -52,6 +52,7 @@ const Post = ({ post, postedBy }) => {
 			}
 			showToast("Success", "Post deleted", "success");
 			setPosts(posts.filter((p) => p._id !== post._id));
+	
 		} catch (error) {
 			showToast("Error", error.message, "error");
 		}
@@ -143,7 +144,7 @@ const Post = ({ post, postedBy }) => {
 					)}
 
 					<Flex gap={3} my={1}>
-						<Actions post={post} />
+						<Actions post={post}  />
 					</Flex>
 				</Flex>
 			</Flex>
