@@ -4,8 +4,9 @@
 	"description": "",
 	"main": "server.js",
 	"scripts": {
-		"dev": "nodemon server.js",
-		"start": "node server.js"
+		"dev": "NODE_ENV=development nodemon backend/server.js",
+		"start": "NODE_ENV=production node backend/server.js",
+		"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
 	},
 	"type": "module",
 	"keywords": [],
@@ -13,7 +14,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"bcryptjs": "^2.4.3",
-		"cloudinary": "^1.41.3",
+		"cloudinary": "^1.40.0",
 		"cookie-parser": "^1.4.6",
 		"cron": "^3.1.6",
 		"dotenv": "^16.3.1",
