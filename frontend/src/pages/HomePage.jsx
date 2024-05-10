@@ -48,8 +48,8 @@ const HomePage = () => {
 				))}
 			</Box>
 			<Box
-				flex={30}
-				display={{
+				p={30}
+				display={{ md: 'flex'
 				
 				}}
 			>
